@@ -166,7 +166,7 @@ function App() {
         <Route path="/edit-driver/:id" exact component={DriverUpdate} />
         <Route path="/Add-Driver" exact component={AddDriver} />
         <Route path="/View-Driver" exact component={DriverDetails} />
-       
+
         <Route path="/assign-driver/:username" exact>
           <AssignD />
         </Route>
@@ -302,7 +302,7 @@ function App() {
           <EmployeeManagement />
         </Route>
 
-        
+
 
         <Route path="/login" exact>
           <Login />

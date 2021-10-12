@@ -100,37 +100,39 @@ function EditInsurenceForm(){
             <form onSubmit = {onSubmit}>
 
                 <Label for = "InsurenceID">Insurance Plan ID</Label><br/>
-                <Input type = 'text' name = "InsurenceID" placeholder = "Enter The New ID" value = {InsurenceID}
+                <Input type = 'text' name = "InsurenceID"  value = {InsurenceID} pattern="[I]{1}[P]{1}[0-9]{3}"
+		               title="Invalid Insurence ID pattern! Ex:IPxxx" required
                 onChange = {(e) =>{
                     setInsurenceId(e.target.value);
                 }}></Input><br/>
 
                 <Label for = "InsurenceName">Insurance Plan Name</Label><br/>
-                <Input type = 'text' name = "InsurenceName" placeholder = "Enter The New Package Name" value = {InsurenceName}
+                <Input type = 'text' name = "InsurenceName" placeholder = "Enter The New Package Name" value = {InsurenceName} required
                 onChange = {(e)=>{
                     setInsurenceName(e.target.value);
                 }}></Input><br/>
 
                 <Label for = "InsurencePrice">Insurance Plan Price</Label><br/>
-                <Input type = 'text' name = "InsurencePrice" placeholder = "Enter The New Price" value = {InsurencePrice} 
+                <Input type = 'text' name = "InsurencePrice" placeholder = "Enter The New Price" value = {InsurencePrice} pattern="[R]{1}[s]{1}[0-9]+"
+                       title="Invalid Price pattern! Ex:Rsxxxx" required
                 onChange = {(e)=>{
                     setInsurencePrice(e.target.value);
                 }}></Input><br/>
 
                 <Label for = "InsurenceCoverage">Coverage</Label><br/>
-                <Input type = 'text' name = "InsurenceCoverage" placeholder = "Enter The New Coverage" value = {InsurenceCoverage}
+                <Input type = 'text' name = "InsurenceCoverage" placeholder = "Enter The New Coverage" value = {InsurenceCoverage} required
                 onChange = {(e)=>{
                     setInsurenceCoverage(e.target.value);
                 }}></Input><br/>
 
                 <Label for = "InsurenceAccidentType">Accident types</Label><br/>
-                <Input type = 'text' name = "InsurenceAccidentType" placeholder = "Enter The New Accident Types" value = {InsurenceAccidentType}
+                <Input type = 'text' name = "InsurenceAccidentType" placeholder = "Enter The New Accident Types" value = {InsurenceAccidentType} required
                 onChange = {(e)=>{
                     setInsurenceAccidentType(e.target.value);
                 }}></Input><br/>
 
                 <Label for = "InsurenceDetails">Insurance Description</Label><br/>
-                <Input type = "text" name = "InsurenceDetails" placeholder = "Enter The New Description" value = {InsurenceDetails}
+                <Input type = "text" name = "InsurenceDetails" placeholder = "Enter The New Description" value = {InsurenceDetails} required
                 onChange = {(e) =>{
                     setInsurenceDetails(e.target.value);
                 }}></Input><br/>

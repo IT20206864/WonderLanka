@@ -59,38 +59,40 @@ axios.post("http://localhost:8070/insurences/add-package" , newInsurence ).then(
             <form onSubmit = {sendData}>
 
                 <Label for = "InsurenceID">Insurance Plan ID</Label><br/>
-                <Input type = 'text' name = "InsurenceID" placeholder = "Enter Plan ID" 
+                <Input type = 'text' name = "InsurenceID" placeholder = "Enter Plan ID" pattern="[I]{1}[P]{1}[0-9]{3}"
+		               title="Invalid Insurence ID pattern! Ex:IPxxx" required
                 onChange = {(e) => {
                     setInsurenceId(e.target.value);
                 }}></Input><br/>
 
                 <Label for = "InsurenceName">Insurance Plan Name</Label><br/>
-                <Input type = 'text' name = "InsurenceName" placeholder = "Enter Plan Name"
+                <Input type = 'text' name = "InsurenceName" placeholder = "Enter Plan Name" required
                 onChange = {(e) =>{
                     setInsurenceName(e.target.value);
                 }}></Input><br/>
 
                 <Label for = "InsurencePrice">Insurance Plan Price</Label><br/>
-                <Input type = 'text' name = "InsurencePrice" placeholder = "Enter The Price"
+                <Input type = 'text' name = "InsurencePrice" placeholder = "Enter The Price"  pattern="[R]{1}[s]{1}[0-9]+"
+                       title="Invalid Price pattern! Ex:Rsxxxx" required
                 onChange = {(e)=>{
                     setInsurencePrice(e.target.value);
                 }}></Input><br/>
 
                 <Label for = "InsurenceCoverage">Coverage</Label><br/>
-                <Input type = 'text' name = "InsurenceCoverage" placeholder = "Enter The Coverage"
+                <Input type = 'text' name = "InsurenceCoverage" placeholder = "Enter The Coverage" required
                 onChange = {(e)=>{
                     setInsurenceCoverage(e.target.value);
                 }}></Input><br/>
 
                 <Label for = "InsurenceAccidentType">Accident types</Label><br/>
-                <Input type = 'text' name = "InsurenceAccidentType" placeholder = "Enter The Accident Types"
+                <Input type = 'text' name = "InsurenceAccidentType" placeholder = "Enter The Accident Types" required
                 onChange = {(e)=>{
                     setInsurenceAccidentType(e.target.value);
                 }}></Input><br/>
 
 
-                <Label for = "InsurenceDetails">Insurance Plan Description</Label><br/>
-                <Input type = "text" name = "InsurenceDetails" 
+                <Label for = "InsurenceDetails">Insurance Plan Description</Label><br/> 
+                <Input type = "text" name = "InsurenceDetails"  required
                 onChange = {(e)=>{
                     setInsurenceDetails(e.target.value);
                 }}></Input><br/>
